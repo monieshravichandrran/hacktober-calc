@@ -28,6 +28,17 @@ function factorial(x){
   return power;
 }
 
+function cos(x){
+  return Math.cos((x*22/7)/180);
+}
+
+function sin(x){
+  return Math.sin((x*22/7)/180);
+}
+
+function tan(x){
+  return Math.tan((x*22/7)/180);
+}
 
 
-export { sum, subtraction, multiplication, division, log, power, factorial  };
+export { sum, subtraction, multiplication, division, log, power, factorial, cos, sin, tan };

@@ -1,4 +1,4 @@
-import { sum, subtraction, multiplication, division, log, power, factorial } from './operations.js';
+import { sum, subtraction, multiplication, division, log, power, factorial, cos, sin, tan } from './operations.js';
 
 const root = document.querySelector('html');
 
@@ -100,6 +100,18 @@ operationButtons.forEach(operation => {
     const operator = e.target.textContent;
     if(operator ==='=' && currentNumber.textContent.length>3 && currentNumber.textContent.slice(0,3)==='log'){
       currentNumber.innerHTML = log(parseInt(currentNumber.textContent.slice(3)));
+      return;
+    }
+    if(operator ==='=' && currentNumber.textContent.length>3 && currentNumber.textContent.slice(0,3)==='cos'){
+      currentNumber.innerHTML = cos(parseInt(currentNumber.textContent.slice(3)));
+      return;
+    }
+    if(operator ==='=' && currentNumber.textContent.length>3 && currentNumber.textContent.slice(0,3)==='sin'){
+      currentNumber.innerHTML = sin(parseInt(currentNumber.textContent.slice(3)));
+      return;
+    }
+    if(operator ==='=' && currentNumber.textContent.length>3 && currentNumber.textContent.slice(0,3)==='tan'){
+      currentNumber.innerHTML = tan(parseInt(currentNumber.textContent.slice(3)));
       return;
     }
     if(operator==='=' && currentNumber.textContent.length>=2 && currentNumber.textContent[currentNumber.textContent.length-1]=='!'){
